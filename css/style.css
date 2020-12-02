@@ -115,6 +115,19 @@ body {
     transform: translate(0)
   }
 }
+@keyframes moveInBottom {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+    animation-timing-function: ease-out;
+    /* animation-iteration-count: 3;  */
+    /* animation-delay: 1s; */
+  }
+
+  100%{
+    transform: translate(0)
+  }
+}
 
 .btn:link,
 .btn:visited {
@@ -151,8 +164,20 @@ body {
   top: 0;
   left: 0;
   z-index: -1;
+  transition: all .4s;
 }
 
 .btn-white::after {
   background-color: #fff;
+}
+
+.btn:hover::after {
+  transform: scaleX(1.5) scaleY(1.6);
+  opacity: 0;
+}
+
+.btn-animated {
+  animation: moveInBottom .5s ease-out .75s;
+  animation-fill-mode: backwards;
+
 }
