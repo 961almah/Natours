@@ -50,12 +50,60 @@ body {
 
 .heading-primary {
   color: #fff;
+  text-transform: uppercase;
 }
 
 .heading-primary-main {
+  display: block;
+  font-size: 60px;
+  font-weight: 400;
+  letter-spacing: 35px;
 
+  animation-name: moveInLeft;
+  animation-duration: 3s;
+  animation-timing-function: ease-out;
+    /* animation-iteration-count: 3;
+    animation-delay: 1s; */
 }
 
 .heading-primary-sub{
+  display: block;
+  font-size: 20px;
+  font-weight: 700;
+  letter-spacing: 17.5px;
 
+  animation: moveInRight 3s ease-out;
+}
+
+@keyframes moveInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-100px);
+  }
+
+  80% {
+    transform: translate(20px)
+  }
+
+  100%{
+    transform: translate(0)
+  }
+}
+
+@keyframes moveInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(100px);
+    animation-timing-function: ease-out;
+    /* animation-iteration-count: 3;
+    animation-delay: 1s; */
+  }
+
+  80% {
+    transform: translate(-20px)
+  }
+
+  100%{
+    transform: translate(0)
+  }
 }
