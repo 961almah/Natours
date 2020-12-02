@@ -46,11 +46,14 @@ body {
   top: 50%;
   left: 50%;
   transform: translate(-40%, -50%);
+  text-align: center;
 }
 
 .heading-primary {
   color: #fff;
   text-transform: uppercase;
+
+  backface-visibility: hidden;
 }
 
 .heading-primary-main {
@@ -81,6 +84,10 @@ body {
     transform: translateX(-100px);
   }
 
+  /* 60% {
+    transform: rotate(120deg);
+  } */
+
   80% {
     transform: translate(20px)
   }
@@ -106,4 +113,16 @@ body {
   100%{
     transform: translate(0)
   }
+}
+
+.btn:link,
+.btn:visited {
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 15px 40px;
+}
+
+.btn-white {
+  background-color: #fff;
+  color: #777;
 }
